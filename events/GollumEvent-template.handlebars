@@ -1,0 +1,8 @@
+{{#view view.ActorView}}
+  modified the <a target="_blank" href="https://github.com/{{unbound event.repo.name}}/wiki">wiki</a>
+{{/view}}
+<div class="additional-info" >
+  {{#each event.payload.pages }}
+    <span>{{echo "action"}} <a target="_blank" {{bindAttr href="html_url"}}>{{page_name}}</a></span>
+  {{/each}}
+</div>
